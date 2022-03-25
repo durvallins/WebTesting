@@ -1,34 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220325 05:27:39.114" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220325 05:51:20.618" rpa="false" schemaversion="3">
 <suite id="s1" name="Amazon Testes" source="C:\Users\durval.neto\Documents\github\WebTesting\amazon_testes.robot">
 <test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Mais Vendidos&quot;" line="9">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser = chrome</arg>
+<arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220325 05:27:39.419" level="INFO">Opening browser 'firefox' to base url 'browser = chrome'.</msg>
-<msg timestamp="20220325 05:27:39.421" level="INFO">Firefox driver log is always forced to to: C:\Users\durval.neto\Documents\github\WebTesting\geckodriver-1.log</msg>
-<msg timestamp="20220325 05:27:42.543" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20220325 05:27:42.544" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
-</msg>
-<status status="FAIL" starttime="20220325 05:27:39.419" endtime="20220325 05:27:42.575"/>
+<msg timestamp="20220325 05:51:20.894" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220325 05:51:20.894" endtime="20220325 05:51:23.923"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20220325 05:27:42.575" endtime="20220325 05:27:42.575"/>
+<status status="PASS" starttime="20220325 05:51:23.923" endtime="20220325 05:51:24.081"/>
 </kw>
-<status status="FAIL" starttime="20220325 05:27:39.418" endtime="20220325 05:27:42.576"/>
+<status status="PASS" starttime="20220325 05:51:20.893" endtime="20220325 05:51:24.081"/>
+</kw>
+<kw name=" Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220325 05:51:24.083" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20220325 05:51:24.082" endtime="20220325 05:51:26.627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_MAIS_VENDIDOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220325 05:51:26.661" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00929943+2595139]
+	Ordinal0 [0x008BC9F1+2148849]
+	Ordinal0 [0x007B4528+1066280]
+	Ordinal0 [0x0079C640+968256]
+	Ordinal0 [0x007FE259+1368665]
+	Ordinal0 [0x0080B292+1421970]
+	Ordinal0 [0x007FB806+1357830]
+	Ordinal0 [0x007D6086+1204358]
+	Ordinal0 [0x007D6F96+1208214]
+	GetHandleVerifier [0x00ACB232+1658114]
+	GetHandleVerifier [0x00B8312C+2411516]
+	GetHandleVerifier [0x009BF261+560433]
+	GetHandleVerifier [0x009BE366+556598]
+	Ordinal0 [0x008C286B+2173035]
+	Ordinal0 [0x008C75F8+2192888]
+	Ordinal0 [0x008C76E5+2193125]
+	Ordinal0 [0x008D11FC+2232828]
+	BaseThreadInitThunk [0x7627FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77457A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77457A6E+238]
+</msg>
+<msg timestamp="20220325 05:51:26.708" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00929943+2595139]
+	Ordinal0 [0x008BC9F1+2148849]
+	Ordinal0 [0x007B4528+1066280]
+	Ordinal0 [0x0079C640+968256]
+	Ordinal0 [0x007FE259+1368665]
+	Ordinal0 [0x0080B292+1421970]
+	Ordinal0 [0x007FB806+1357830]
+	Ordinal0 [0x007D6086+1204358]
+	Ordinal0 [0x007D6F96+1208214]
+	GetHandleVerifier [0x00ACB232+1658114]
+	GetHandleVerifier [0x00B8312C+2411516]
+	GetHandleVerifier [0x009BF261+560433]
+	GetHandleVerifier [0x009BE366+556598]
+	Ordinal0 [0x008C286B+2173035]
+	Ordinal0 [0x008C75F8+2192888]
+	Ordinal0 [0x008C76E5+2193125]
+	Ordinal0 [0x008D11FC+2232828]
+	BaseThreadInitThunk [0x7627FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77457A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77457A6E+238]
+</msg>
+<status status="FAIL" starttime="20220325 05:51:26.627" endtime="20220325 05:51:26.854"/>
+</kw>
+<status status="FAIL" starttime="20220325 05:51:24.082" endtime="20220325 05:51:26.855"/>
 </kw>
 <doc>Esse teste verifica o menu do site da Amazon.com.br
 e verifica a categoria computadores e informática.</doc>
 <tag>categorias</tag>
 <tag>menus</tag>
-<status status="FAIL" starttime="20220325 05:27:39.417" endtime="20220325 05:27:42.577">Setup failed:
-SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+<status status="FAIL" starttime="20220325 05:51:20.892" endtime="20220325 05:51:26.857">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00929943+2595139]
+	Ordinal0 [0x008BC9F1+2148849]
+	Ordinal0 [0x007B4528+1066280]
+	Ordinal0 [0x0079C640+968256]
+	Ordinal0 [0x007FE259+1368665]
+	Ordinal0 [0x0080B292+1421970]
+	Ordinal0 [0x007FB806+1357830]
+	Ordinal0 [0x007D6086+1204358]
+	Ordinal0 [0x007D6F96+1208214]
+	GetHandleVerifier [0x00ACB232+1658114]
+	GetHandleVerifier [0x00B8312C+2411516]
+	GetHandleVerifier [0x009BF261+560433]
+	GetHandleVerifier [0x009BE366+556598]
+	Ordinal0 [0x008C286B+2173035]
+	Ordinal0 [0x008C75F8+2192888]
+	Ordinal0 [0x008C76E5+2193125]
+	Ordinal0 [0x008D11FC+2232828]
+	BaseThreadInitThunk [0x7627FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77457A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77457A6E+238]
 </status>
 </test>
 <doc>Essa suíte testa o site da Amazon.com.br</doc>
-<status status="FAIL" starttime="20220325 05:27:39.116" endtime="20220325 05:27:42.578"/>
+<status status="FAIL" starttime="20220325 05:51:20.620" endtime="20220325 05:51:26.864"/>
 </suite>
 <statistics>
 <total>
@@ -43,5 +128,31 @@ SessionNotCreatedException: Message: Expected browser binary location, but unabl
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220325 05:51:26.661" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00929943+2595139]
+	Ordinal0 [0x008BC9F1+2148849]
+	Ordinal0 [0x007B4528+1066280]
+	Ordinal0 [0x0079C640+968256]
+	Ordinal0 [0x007FE259+1368665]
+	Ordinal0 [0x0080B292+1421970]
+	Ordinal0 [0x007FB806+1357830]
+	Ordinal0 [0x007D6086+1204358]
+	Ordinal0 [0x007D6F96+1208214]
+	GetHandleVerifier [0x00ACB232+1658114]
+	GetHandleVerifier [0x00B8312C+2411516]
+	GetHandleVerifier [0x009BF261+560433]
+	GetHandleVerifier [0x009BE366+556598]
+	Ordinal0 [0x008C286B+2173035]
+	Ordinal0 [0x008C75F8+2192888]
+	Ordinal0 [0x008C76E5+2193125]
+	Ordinal0 [0x008D11FC+2232828]
+	BaseThreadInitThunk [0x7627FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77457A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77457A6E+238]
+</msg>
 </errors>
 </robot>
