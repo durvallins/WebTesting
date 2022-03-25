@@ -1,94 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220324 23:01:52.568" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220325 05:27:39.114" rpa="false" schemaversion="3">
 <suite id="s1" name="Amazon Testes" source="C:\Users\durval.neto\Documents\github\WebTesting\amazon_testes.robot">
-<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
+<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Mais Vendidos&quot;" line="9">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser = chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220324 23:01:52.822" level="INFO">Opening browser 'firefox' to base url 'browser = chrome'.</msg>
-<msg timestamp="20220324 23:01:52.824" level="INFO">Firefox driver log is always forced to to: C:\Users\durval.neto\Documents\github\WebTesting\geckodriver-3.log</msg>
-<msg timestamp="20220324 23:01:59.894" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220324 23:01:59.895" level="FAIL">InvalidArgumentException: Message: Malformed URL: URL constructor: browser = chrome is not a valid URL.
-Stacktrace:
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
-InvalidArgumentError@chrome://remote/content/shared/webdriver/Errors.jsm:310:5
-GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.js:785:11
+<msg timestamp="20220325 05:27:39.419" level="INFO">Opening browser 'firefox' to base url 'browser = chrome'.</msg>
+<msg timestamp="20220325 05:27:39.421" level="INFO">Firefox driver log is always forced to to: C:\Users\durval.neto\Documents\github\WebTesting\geckodriver-1.log</msg>
+<msg timestamp="20220325 05:27:42.543" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220325 05:27:42.544" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
 </msg>
-<status status="FAIL" starttime="20220324 23:01:52.822" endtime="20220324 23:01:59.914"/>
+<status status="FAIL" starttime="20220325 05:27:39.419" endtime="20220325 05:27:42.575"/>
 </kw>
-<status status="FAIL" starttime="20220324 23:01:52.822" endtime="20220324 23:01:59.915"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220325 05:27:42.575" endtime="20220325 05:27:42.575"/>
 </kw>
-<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220324 23:01:59.919" endtime="20220324 23:02:00.718"/>
-</kw>
-<status status="PASS" starttime="20220324 23:01:59.918" endtime="20220324 23:02:00.718"/>
+<status status="FAIL" starttime="20220325 05:27:39.418" endtime="20220325 05:27:42.576"/>
 </kw>
 <doc>Esse teste verifica o menu do site da Amazon.com.br
 e verifica a categoria computadores e informática.</doc>
 <tag>categorias</tag>
 <tag>menus</tag>
-<status status="FAIL" starttime="20220324 23:01:52.820" endtime="20220324 23:02:00.719">Setup failed:
-InvalidArgumentException: Message: Malformed URL: URL constructor: browser = chrome is not a valid URL.
-Stacktrace:
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
-InvalidArgumentError@chrome://remote/content/shared/webdriver/Errors.jsm:310:5
-GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.js:785:11
-</status>
-</test>
-<test id="s1-t2" name="Caso de teste 02 - Pesquisa de um Produto" line="19">
-<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser = chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220324 23:02:00.724" level="INFO">Opening browser 'firefox' to base url 'browser = chrome'.</msg>
-<msg timestamp="20220324 23:02:00.725" level="INFO">Firefox driver log is always forced to to: C:\Users\durval.neto\Documents\github\WebTesting\geckodriver-4.log</msg>
-<msg timestamp="20220324 23:02:07.794" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220324 23:02:07.794" level="FAIL">InvalidArgumentException: Message: Malformed URL: URL constructor: browser = chrome is not a valid URL.
-Stacktrace:
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
-InvalidArgumentError@chrome://remote/content/shared/webdriver/Errors.jsm:310:5
-GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.js:785:11
-</msg>
-<status status="FAIL" starttime="20220324 23:02:00.723" endtime="20220324 23:02:07.795"/>
-</kw>
-<status status="FAIL" starttime="20220324 23:02:00.722" endtime="20220324 23:02:07.796"/>
-</kw>
-<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220324 23:02:07.798" endtime="20220324 23:02:08.547"/>
-</kw>
-<status status="PASS" starttime="20220324 23:02:07.797" endtime="20220324 23:02:08.547"/>
-</kw>
-<doc>Esste tste verifica a busca de um produto.</doc>
-<tag>busca_produtos</tag>
-<tag>lista_busca</tag>
-<status status="FAIL" starttime="20220324 23:02:00.721" endtime="20220324 23:02:08.548">Setup failed:
-InvalidArgumentException: Message: Malformed URL: URL constructor: browser = chrome is not a valid URL.
-Stacktrace:
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5
-InvalidArgumentError@chrome://remote/content/shared/webdriver/Errors.jsm:310:5
-GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.js:785:11
+<status status="FAIL" starttime="20220325 05:27:39.417" endtime="20220325 05:27:42.577">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
 </status>
 </test>
 <doc>Essa suíte testa o site da Amazon.com.br</doc>
-<status status="FAIL" starttime="20220324 23:01:52.570" endtime="20220324 23:02:08.551"/>
+<status status="FAIL" starttime="20220325 05:27:39.116" endtime="20220325 05:27:42.578"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">busca_produtos</stat>
 <stat pass="0" fail="1" skip="0">categorias</stat>
-<stat pass="0" fail="1" skip="0">lista_busca</stat>
 <stat pass="0" fail="1" skip="0">menus</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
 </suite>
 </statistics>
 <errors>
