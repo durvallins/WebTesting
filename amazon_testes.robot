@@ -11,9 +11,9 @@ Caso de teste 01 - Acesso ao menu "Mais Vendidos"
     ...                e verifica a categoria computadores e informática.
     [Tags]             menus    categorias
     Acessar a home page do site Amazon.com.br
-#     Entrar no menu "Mais vendidos"
-#     Verificar se o título da página fica "Mais Vendidos e Tecnologia | Amazon.com.br"
-#     Verificar se aparece a frase "Mais Vendidos e Tecnologia"
+    Entrar no menu "Mais vendidos"
+    Verificar se aparece a frase "Mais Vendidos"
+    # Verificar se o título da página fica "Mais Vendidos e Tecnologia | Amazon.com.br"
 #     Verificar se aparece a categoria "Computadores e Informática"
 
 # Caso de teste 02 - Pesquisa de um Produto
