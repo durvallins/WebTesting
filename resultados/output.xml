@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220327 05:58:01.858" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes Gherkin Bdd" source="C:\Users\durval.neto\Documents\github\WebTesting\amazon_testes_gherkin_bdd.robot">
+<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Mais Vendidos&quot;" line="9">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220327 05:58:02.149" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220327 05:58:02.149" endtime="20220327 05:58:05.251"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220327 05:58:05.252" endtime="20220327 05:58:05.368"/>
+</kw>
+<status status="PASS" starttime="20220327 05:58:02.148" endtime="20220327 05:58:05.369"/>
+</kw>
+<kw name="Dado que estou na home page Amazon.com.br" library="amazon_resources">
+<kw name=" Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220327 05:58:05.370" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20220327 05:58:05.370" endtime="20220327 05:58:07.721"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_MAIS_VENDIDOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220327 05:58:07.722" endtime="20220327 05:58:07.941"/>
+</kw>
+<status status="PASS" starttime="20220327 05:58:05.369" endtime="20220327 05:58:07.941"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Mais Vendidos em Eletrônicos | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220327 05:58:08.526" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220327 05:58:08.528" level="FAIL">Title should have been 'Mais Vendidos em Eletrônicos | Amazon.com.br' but was 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="FAIL" starttime="20220327 05:58:07.942" endtime="20220327 05:58:08.551"/>
+</kw>
+<status status="FAIL" starttime="20220327 05:58:07.942" endtime="20220327 05:58:08.554"/>
+</kw>
+<status status="FAIL" starttime="20220327 05:58:05.369" endtime="20220327 05:58:08.558"/>
+</kw>
+<kw name="Quando acessar o menu &quot;Mais Vendidos&quot;" library="amazon_resources">
+<status status="NOT RUN" starttime="20220327 05:58:08.566" endtime="20220327 05:58:08.566"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Amazon.com.br Mais Vendidos: Os items mais populares na Amazon&quot;" library="amazon_resources">
+<status status="NOT RUN" starttime="20220327 05:58:08.567" endtime="20220327 05:58:08.567"/>
+</kw>
+<kw name="E o texto &quot;Mais Vendidos&quot; deve ser exibido na página" library="amazon_resources">
+<status status="NOT RUN" starttime="20220327 05:58:08.568" endtime="20220327 05:58:08.568"/>
+</kw>
+<kw name="E a categoria &quot;Mais Vendidos em Eletrônicos&quot; deve ser exibida na página" library="amazon_resources">
+<status status="NOT RUN" starttime="20220327 05:58:08.569" endtime="20220327 05:58:08.569"/>
+</kw>
+<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220327 05:58:08.927" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220327 05:58:08.571" endtime="20220327 05:58:08.927"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220327 05:58:08.928" endtime="20220327 05:58:11.096"/>
+</kw>
+<status status="PASS" starttime="20220327 05:58:08.570" endtime="20220327 05:58:11.096"/>
+</kw>
+<doc>Esse teste verifica o menu do site da Amazon.com.br
+e verifica a categoria computadores e informática.</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="FAIL" starttime="20220327 05:58:02.146" endtime="20220327 05:58:11.097">Title should have been 'Mais Vendidos em Eletrônicos | Amazon.com.br' but was 'Amazon.com.br | Tudo pra você, de A a Z.'.</status>
+</test>
+<doc>Essa suíte testa o site da Amazon.com.br</doc>
+<status status="FAIL" starttime="20220327 05:58:01.861" endtime="20220327 05:58:11.102"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">categorias</stat>
+<stat pass="0" fail="1" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes Gherkin Bdd">Amazon Testes Gherkin Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
